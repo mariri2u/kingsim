@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="caption">
     <h2>ラブリル - ({{ this.$store.getters['labrill/suplyCriDmg'] }})</h2>
     <table>
       <tbody>
@@ -86,3 +86,7 @@ export default {
   }
 }
 </script>
+
+<style lang="sass" scoped>
+  @import "~/assets/style/caption.sass"
+</style>

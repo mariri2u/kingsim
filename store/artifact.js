@@ -5,6 +5,12 @@ export const state = () => ({
   wing: 0
 });
 
+export const getters = {
+  suplyAmp: function(state) {
+    
+  }
+}
+
 export const mutations = {
   setCrown(state, value) {
     state.crown = value

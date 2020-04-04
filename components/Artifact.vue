@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="caption">
     <h2>遺物</h2>
     <table>
       <tbody>
@@ -53,3 +53,7 @@ export default {
   } 
 }
 </script>
+
+<style lang="sass" scoped>
+  @import "~/assets/style/caption.sass"
+</style>

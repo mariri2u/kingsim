@@ -23,7 +23,8 @@ export default {
   ** Global CSS
   */
   css: [
-    '~/assets/style/equipment.sass'
+    '~/assets/style/equipment.sass',
+    '~/assets/style/caption.sass'
   ],
   /*
   ** Plugins to load before mounting the App
