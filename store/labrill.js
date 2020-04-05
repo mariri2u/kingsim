@@ -1,3 +1,5 @@
+import wakingTable from '~/data/waking_table.json'
+
 export const state = () => ({
   weapon: 0,
   soul: 0,
@@ -9,29 +11,15 @@ export const state = () => ({
 });
 
 export const getters = {
+  // 自分のクリダメ(内部値)
   selfCriDmg: function(state) {
-    let val = 0
-    val += state.criDmg
-    switch (state.tree) {
-      case 0:
-        val += 50
-        break
-      case 1:
-        val += 60
-        break
-      case 2:
-        val += 72
-        break
-      case 3:
-        val += 87
-        break
-      case 4:
-        val += 105
-        break
-      case 5:
-        val += 125
-        break
+    // 表示クリダメで初期化
+    let val = state.criDmg
+    // 聖夜のクリスマスツリー
+    if (0 <= state.tree && state.tree <= 5) {
+      val += wakingTable['base50'][state.tree]
     }
+    // T5光
     if (state.tier5 == 1) {
       val += 20
     }
@@ -39,45 +27,11 @@ export const getters = {
   },
   suplyCriDmg: function(state, getters) {
     let val = 50 + Math.floor(getters.selfCriDmg * 0.15)
-    switch (state.weapon) {
-      case 0:
-        val += 30
-        break
-      case 1:
-        val += 36
-        break
-      case 2:
-        val += 42
-        break
-      case 3:
-        val += 51
-        break
-      case 4:
-        val += 63
-        break
-      case 5:
-        val += 75
-        break
+    if (0 <= state.weapon && state.weapon <= 5) {
+      val += wakingTable['base30'][state.weapon]
     }
-    switch (state.treasure) {
-      case 0:
-        val += 20
-        break
-      case 1:
-        val += 24
-        break
-      case 2:
-        val += 29
-        break
-      case 3:
-        val += 35
-        break
-      case 4:
-        val += 42
-        break
-      case 5:
-        val += 50
-        break
+    if (0 <= state.treasure && state.treasure <= 5) {
+      val += wakingTable['base20'][state.treasure]
     }
     switch (state.evil) {
       case 1:
