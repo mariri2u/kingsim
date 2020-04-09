@@ -68,9 +68,18 @@ export default {
           to: { name: 'inspire' }
         },
         {
-          title: 'Test',
+          title: 'ディーラー',
           icon: 'cog',
-          to: { name: 'test' }
+          to: { name: 'dealer' }
+        },        {
+          title: 'サポート',
+          icon: 'cog',
+          to: { name: 'support' }
+        },
+        {
+          title: 'meta',
+          icon: 'cog',
+          to: { name: 'meta' }
         }
       ]
     }
