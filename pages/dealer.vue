@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Luna from '~/components/Luna'
+import Luna from '~/characters/Luna'
 
 export default {
   components: {

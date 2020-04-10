@@ -7,9 +7,9 @@
 </template>
 
 <script>
-import Labrill from '~/components/Labrill'
+import Labrill from '~/characters/Labrill'
+import Velonica from '~/characters/Velonica'
 import Artifact from '~/components/Artifact'
-import Velonica from '~/components/Velonica'
 
 export default {
   components: {
