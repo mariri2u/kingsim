@@ -1,5 +1,5 @@
 <template>
-  <div class="caption">
+  <div class="caption columns">
     <h2>ルナ</h2>
     <div class="caption">
       <h2>装備</h2>

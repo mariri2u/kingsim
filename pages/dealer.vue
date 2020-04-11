@@ -1,5 +1,5 @@
 <template>
-  <section class="section">
+  <section class="section is-multiline">
     <luna />
   </section>
 </template>

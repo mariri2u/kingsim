@@ -1,5 +1,5 @@
 <template>
-  <section class="section">
+  <section class="section columns is-multiline">
     <labrill />
     <velonica />
     <artifact />
